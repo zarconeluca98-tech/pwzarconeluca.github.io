@@ -1,0 +1,479 @@
+/* Azzero margini e spazi interni predefiniti del browser
+   e imposto box-sizing*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stile generale della pagina */
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  background-color: #f6f3ed;
+  color: #2d2d2d;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Contenitore centrale usato nelle sezioni:
+   limita la larghezza massima e centra il contenuto */
+.contenitore {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Testata iniziale con logo e menu. */
+.header,
+.testata-planeta {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d6d0c6;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nome principale del logo:
+   colore verde tenue per richiamare vigneti, sostenibilità e natura */
+.logo-testo {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  font-weight: 700;
+  color: #83a384;
+  letter-spacing: 0.8px;
+}
+
+/* Sottotitolo del logo:
+   più piccolo e più neutro rispetto al nome principale */
+.logo-sottotitolo {
+  font-size: 13px;
+  color: #6a665f;
+  margin-top: 2px;
+}
+
+/* Lista del menu orizzontale senza pallini */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: #2d2d2d;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* Sezione hero iniziale:
+   aggiungo un'opacità all'immagine di sfondo per rendere leggibile il testo */
+.hero,
+.copertina-planeta {
+  background: linear-gradient(rgba(47, 63, 48, 0.58), rgba(47, 63, 48, 0.58)),
+  url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+  padding: 105px 20px;
+}
+
+/* Contenitore interno del testo hero:
+   limito la larghezza per non allungare troppo le righe */
+.hero-contenuto {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Titolo principale della copertina */
+.hero-titolo {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+/* Sottotitolo introduttivo sotto il titolo principale */
+.hero-sottotitolo {
+  font-size: 18px;
+  margin-bottom: 26px;
+}
+
+/* Stile base condiviso tra pulsante hero e pulsanti download */
+.pulsante-principale, .pulsante-download {
+  display: inline-block;
+  background-color: #3e5a3f;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 4px;
+  font-weight: 700;
+  border: 1px solid #3e5a3f;
+}
+
+/* Effetto hover semplice per far capire che il pulsante è cliccabile */
+.pulsante-principale:hover,
+.pulsante-download:hover {
+  background-color: #324933;
+  border-color: #324933;
+}
+
+/* Focus visibile per navigazione da tastiera */
+.pulsante-principale:focus-visible,
+.pulsante-download:focus-visible {
+  outline: 2px solid #d8b88c;
+  outline-offset: 3px;
+}
+
+/* Spaziatura verticale comune per tutte le sezioni */
+.sezione {
+  padding: 68px 0;
+}
+
+/* Sfondo chiaro per le sezioni descrittive principali */
+.sezione-chiara {
+  background-color: #f6f3ed;
+}
+
+/* Sfondo verde scuro per dare contrasto alla sezione sostenibilità */
+.sezione-scura {
+  background-color: #465b47;
+  color: #ffffff;
+}
+
+/* Sfondo intermedio per differenziare alcune aree come certificazioni */
+.sezione-media {
+  background-color: #ece6dc;
+}
+
+/* Parte iniziale di ogni sezione con titolo centrato */
+.intestazione-sezione {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+/* Titolo di sezione con font serif per dare più importanza visiva */
+.intestazione-sezione h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 33px;
+  color: #3e5a3f;
+  margin-bottom: 10px;
+}
+
+/* Nella sezione scura il titolo e il sottotitolo diventano bianchi */
+.intestazione-chiara h2,
+.intestazione-chiara .sottotitolo-sezione {
+  color: #ffffff;
+}
+
+/* Sottotitoli centrati sotto il titolo di sezione */
+.sottotitolo-sezione,
+.sottotitolo-sezione-scura {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+/* Variante più scura del sottotitolo per sezioni su fondo chiaro */
+.sottotitolo-sezione-scura {
+  color: #555049;
+}
+
+/* Sezione "Chi siamo" disposta su due colonne */
+.due-colonne {
+  display: flex;
+  gap: 38px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* Ogni colonna cresce in modo flessibile ma non scende sotto una certa larghezza */
+.colonna {
+  flex: 1 1 320px;
+}
+
+/* Spazio tra i paragrafi della descrizione aziendale */
+.colonna p {
+  margin-bottom: 18px;
+}
+
+/* Box dei dati numerici:
+   sfondo bianco per staccarlo dal resto del contenuto */
+.scheda-numeri,
+.quadro-planeta {
+  background-color: #ffffff;
+  border: 1px solid #d6d0c6;
+  border-radius: 6px;
+  padding: 28px;
+}
+
+/* Ogni dato numerico viene separato verticalmente */
+.dato-numero {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+/* Numero in evidenza */
+.numero {
+  display: block;
+  font-size: 31px;
+  font-weight: 700;
+  color: #3e5a3f;
+}
+
+/* Testo descrittivo sotto al numero */
+.etichetta {
+  font-size: 15px;
+  color: #5f5a53;
+}
+
+/* Griglia a due colonne per i quattro pilastri della sostenibilità */
+.griglia-card,
+.griglia-pilastri {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* Card dei pilastri ESG:
+   sfondo leggermente trasparente su base scura */
+.card,
+.pilastro-sostenibilita {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  padding: 26px 24px;
+}
+
+/* Icona della card */
+.card-icona {
+  font-size: 27px;
+  margin-bottom: 14px;
+}
+
+/* Titolo interno della card */
+.card-titolo {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+/* Testo descrittivo della card */
+.card-testo {
+  font-size: 15.5px;
+  color: #f3f3f3;
+}
+
+/* Lista verticale che contiene i report disponibili */
+.lista-report {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* Box singolo del report:
+   organizzato con testo a sinistra e pulsante a destra */
+.riga-report,
+.scheda-report {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  background-color: #ffffff;
+  border: 1px solid #d6d0c6;
+  border-radius: 6px;
+  padding: 25px;
+  flex-wrap: wrap;
+}
+
+/* Raggruppa anno e dettagli del report */
+.report-info {
+  display: flex;
+  gap: 18px;
+  flex: 1;
+}
+
+/* Anno del report in evidenza */
+.report-anno {
+  min-width: 68px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #3e5a3f;
+}
+
+/* Titolo del singolo report */
+.report-titolo {
+  font-size: 21px;
+  margin-bottom: 10px;
+  color: #2d2d2d;
+}
+
+/* Descrizione sintetica del contenuto del report */
+.report-descrizione {
+  margin-bottom: 14px;
+  color: #565149;
+}
+
+/* Contenitore delle etichette tematiche */
+.etichette {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Etichette */
+.etichetta-tema {
+  background-color: #e6eee5;
+  color: #3e5a3f;
+  padding: 6px 10px;
+  border-radius: 18px;
+  font-size: 13px;
+}
+
+/* Riga di separazione tra i due report */
+.separatore {
+  border: none;
+  border-top: 1px solid #d6d0c6;
+}
+
+/* Griglia delle certificazioni finali */
+.griglia-certificazioni {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* crea tre colonne uguali */
+  gap: 22px;
+}
+
+/* Singolo riquadro della certificazione */
+.riquadro-certificazione {
+  background-color: #ffffff;
+  border: 1px solid #d6d0c6;
+  border-radius: 6px;
+  padding: 26px 22px;
+  text-align: center;
+}
+
+/* Simbolo grafico della certificazione */
+.cert-simbolo {
+  font-size: 27px;
+  margin-bottom: 14px;
+}
+
+/* Titolo della certificazione */
+.riquadro-certificazione h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #3e5a3f;
+}
+
+/* Testo descrittivo della certificazione */
+.riquadro-certificazione p {
+  font-size: 15px;
+  color: #555049;
+}
+
+/* Footer finale con contatti, menu rapido e nota didattica */
+.footer {
+  background-color: #2f3d31;
+  color: #f1f1f1;
+  padding: 48px 0 20px;
+}
+
+/* Colonne del footer */
+.footer-colonne {
+  display: flex;
+  gap: 34px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+/* Ogni colonna del footer occupa spazio in modo flessibile */
+.footer-col,
+.blocco-footer {
+  flex: 1 1 250px;
+}
+
+/* titoli del footer */
+.footer h4 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+/* Testi, link ed elementi lista del footer */
+.footer p,
+.footer li,
+.footer a {
+  font-size: 15px;
+  color: #e2e2e2;
+  text-decoration: none;
+}
+
+/* Distanza verticale tra le voci del menu footer */
+.footer-lista li {
+  margin-bottom: 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Focus visibile anche nel footer */
+.footer a:focus-visible {
+  outline: 2px solid #d8b88c;
+  outline-offset: 2px;
+}
+
+/* Riga finale con nota */
+.footer-fondo {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 18px;
+  text-align: center;
+  font-size: 14px;
+  color: #d2d2d2;
+}
+
+/* Regole responsive per smartphone:
+   menu in verticale, titolo più piccolo e report più leggibili */
+@media (max-width: 700px) {
+  .header,
+  .testata-planeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero,
+  .copertina-planeta {
+    padding: 88px 20px;
+  }
+
+  .hero-titolo {
+    font-size: 31px;
+  }
+
+  .intestazione-sezione h2 {
+    font-size: 28px;
+  }
+
+  .report-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .report-anno {
+    font-size: 24px;
+  }
+}
